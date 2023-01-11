@@ -1,6 +1,6 @@
 require ('dotenv').config();
 var mysql = require('mysql');
-/*const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Database connection
 mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -12,24 +12,24 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useU
 
 
 module.exports = mongoose;
-*/
 
 
-var Mysqlconnection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "employeedb",
-  multipleStatements: true
-});
 
-Mysqlconnection.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  con.query("CREATE DATABASE mydb", function (err, result) {
-    if (err) throw err;
-    console.log("Database created");
-  });
-});
+// var Mysqlconnection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "root",
+//   database: "employeedb",
+//   multipleStatements: true
+// });
 
-module.exports = Mysqlconnection;
+// Mysqlconnection.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+//   con.query("CREATE DATABASE mydb", function (err, result) {
+//     if (err) throw err;
+//     console.log("Database created");
+//   });
+// });
+
+// module.exports = Mysqlconnection;
